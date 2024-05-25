@@ -25,7 +25,7 @@
           class="m-auto ml-3 cursor-pointer text-2xl font-bold md:ml-5 md:text-3xl"
           @click="useRouter().push('/')"
         >
-          選舉委員會
+          資工系學會
         </span>
         <div class="flex-grow" />
         <!-- > md -->
@@ -82,7 +82,7 @@
         <ClientOnly v-if="showLoginBadge">
           <ElTooltip
             effect="dark"
-            content="你的登入序號"
+            content="您的登入序號"
             placement="bottom"
           >
             <ElButton
@@ -292,7 +292,7 @@
           >
             <template #content>
               <div class="text-center">
-                投票期間為<br>2024年5月23日<br>00:00 ~ 23:59
+                投票期間為<br>2024年6月14日<br>00:00 ~ 23:59
               </div>
             </template>
             <div class="m-3 text-center">
@@ -319,33 +319,13 @@
       <span
         class="text-center text-xs font-bold tracking-tighter text-stone-700 sm:text-sm sm:tracking-tight md:text-base md:tracking-normal"
       >
-        <span class="max-[400px]:hidden">
-          Made by
-          <NuxtLink
-            to="https://github.com/ntpusu/ntpusu-vote/graphs/contributors"
-            class="font-bold hover:text-stone-600 hover:underline"
-            target="_blank"
-            >contributors</NuxtLink
-          >
-          |
-        </span>
-        <NuxtLink
-          to="https://github.com/ntpusu/ntpusu-vote"
-          class="font-bold hover:text-stone-600 hover:underline"
-          target="_blank"
-          >Open Source</NuxtLink
-        >
-      </span>
-      <span
-        class="text-center text-xs font-bold tracking-tighter text-stone-700 sm:text-sm sm:tracking-tight md:text-base md:tracking-normal"
-      >
         ©
         {{ new Date().getFullYear() }}
         <NuxtLink
           to="https://www.facebook.com/NTPUSU"
           class="font-bold hover:text-stone-600 hover:underline"
           target="_blank"
-          >國立臺北大學三峽校區學生會</NuxtLink
+          >國立臺北大學資工系投票</NuxtLink
         >
       </span>
     </div>
@@ -369,16 +349,11 @@
       <div class="flex justify-center">
         <span
           class="w-11/12 whitespace-pre-wrap break-words text-xs sm:text-sm md:text-base"
-          >國立臺北大學三峽校區學生會投票網站（下稱「投票網站」）使用 Cookie
+          >國立臺北大學資工系投票網站（下稱「投票網站」）使用 Cookie
           來記錄您的登入狀態及增進您的使用體驗。這些 Cookie
           僅限於投票網站使用，不會將 Cookie 用於其他目的。如果您選擇禁用
           Cookie，將會無法使用投票網站的部分功能。繼續使用投票網站即表示你同意我們使用
-          Cookie。若您對此使用聲明有任何疑問，請隨時<NuxtLink
-            to="https://www.facebook.com/NTPUSU"
-            target="_blank"
-            class="whitespace-pre-wrap break-all font-bold text-blue-400 hover:text-blue-500 hover:underline"
-            >聯繫我們</NuxtLink
-          >。</span
+          Cookie。</span
         >
       </div>
     </ElCard>
@@ -394,33 +369,33 @@ const route = useRoute();
 const url = useRuntimeConfig().public.productionUrl as string;
 
 useSeoMeta({
-  title: "學生會投票網站",
+  title: "系學會正副會長投票網站",
   titleTemplate() {
-    return `${route.meta.title} | 學生會投票網站`;
+    return `${route.meta.title} | 系學會正副會長投票網站`;
   },
-  description: "國立臺北大學三峽校區學生會投票網站",
-  ogTitle: "國立臺北大學三峽校區學生會投票網站",
+  description: "國立臺北大學資工系投票網站",
+  ogTitle: "國立臺北大學資工系投票網站",
   ogDescription() {
-    return `${route.meta.title} | 國立臺北大學三峽校區學生會投票網站`;
+    return `${route.meta.title} | 國立臺北大學資工系投票網站`;
   },
-  ogSiteName: "國立臺北大學三峽校區學生會投票網站",
+  ogSiteName: "國立臺北大學資工系投票網站",
   ogType: "website",
   ogUrl: url,
   ogImage: url + "/ntpusu.jpg",
-  ogImageAlt: "國立臺北大學三峽校區學生會的標誌",
+  ogImageAlt: "國立臺北大學資工系的標誌",
   ogImageType: "image/jpeg",
   ogImageSecureUrl: url + "/ntpusu.jpg",
   ogLocale: "zh_TW",
   ogLocaleAlternate: "zh_TW",
-  author: "國立臺北大學三峽校區學生會",
-  creator: "國立臺北大學三峽校區學生會",
-  publisher: "國立臺北大學三峽校區學生會",
-  twitterTitle: "國立臺北大學三峽校區學生會投票網站",
+  author: "國立臺北大學資工系學生會",
+  creator: "國立臺北大學資工系學生會",
+  publisher: "國立臺北大學資工系學生會",
+  twitterTitle: "國立臺北大學資工系投票網站",
   twitterDescription() {
-    return `${route.meta.title} | 國立臺北大學三峽校區學生會投票網站`;
+    return `${route.meta.title} | 國立臺北大學資工系投票網站`;
   },
   twitterImage: url + "/ntpusu.jpg",
-  twitterImageAlt: "國立臺北大學三峽校區學生會的標誌",
+  twitterImageAlt: "國立臺北大學資工系的標誌",
   twitterCard: "summary",
 });
 
@@ -439,7 +414,7 @@ useHead({
     },
     {
       name: "keywords",
-      content: "臺北大學, 三峽校區, 學生會, 投票, 選舉, 選舉委員會, 選舉資訊, 投票網站",
+      content: "臺北大學, 三峽校區 ,資工系, 投票, 選舉, 選舉資訊, 投票網站",
     },
     {
       name: "robots",
@@ -493,14 +468,7 @@ const getMenuItems = () => {
         useRouter().push("/");
       },
     },
-    {
-      index: "/bulletin",
-      text: "選舉資訊",
-      click: () => {
-        show.value = false;
-        useRouter().push("/bulletin");
-      },
-    },
+
   ];
   if (status.value === "authenticated") {
     menuItems.push({
@@ -579,27 +547,7 @@ const loginInfo = ref({
   time: "",
 });
 
-const showLoginInfo = async () => {
-  await ElMessageBox.alert(
-    "之後會用此序號抽出得獎者",
-    "你是第 " + loginInfo.value.id + " 個登入投票網站的人",
-    {
-      confirmButtonText: "確 定",
-      showClose: false,
-      lockScroll: true,
-      autofocus: false,
-      closeOnClickModal: true,
-      closeOnPressEscape: true,
-      type: "success",
-      roundButton: true,
-      customStyle: {
-        fontFamily: '"Noto Sans TC", sans-serif',
-      },
-    },
-  ).catch(() => {});
-};
 
-const showLoginBadge = ref(false);
 const showTotalBadge = ref(false);
 
 const checkLogin = () => {
@@ -608,12 +556,12 @@ const checkLogin = () => {
       if (status.value === "authenticated") {
         await $fetch("/api/check/login").then(async (res) => {
           loginInfo.value = res.login;
-          showLoginBadge.value = true;
+          // showLoginBadge.value = true;
 
           if (res.firstLogin) {
             await totalCntRefresh();
             await realCntRefresh();
-            await showLoginInfo();
+            // await showLoginInfo();
           }
         });
       }
