@@ -84,44 +84,16 @@ const style = (start: Date, end: Date) => {
 
 const activities = [
   {
-    content: "登記參選",
-    start: new Date(2024, 3, 25),
-    end: new Date(2024, 4, 6, 23, 59, 59),
-    showEnd: true,
-    showTime: false,
-  },
-  {
-    content: "候選人名單公告",
-    start: new Date(2024, 4, 10),
-    end: new Date(2024, 4, 11),
-    showEnd: false,
-    showTime: false,
-  },
-  {
-    content: "選舉公報",
-    start: new Date(2024, 4, 16),
-    end: new Date(2024, 4, 17),
-    showEnd: false,
-    showTime: false,
-  },
-  {
-    content: "候選人政見發表會",
-    start: new Date(2024, 4, 17),
-    end: new Date(2024, 4, 18),
-    showEnd: false,
-    showTime: false,
-  },
-  {
     content: "線上投票",
-    start: new Date(2024, 4, 23),
-    end: new Date(2024, 4, 24),
+    start: new Date(2024, 5, 14),
+    end: new Date(2024, 5, 15),
     showEnd: false,
     showTime: false,
   },
   {
     content: "當選名單公告",
-    start: new Date(2024, 4, 24),
-    end: new Date(2024, 4, 25),
+    start: new Date(2024, 5, 15),
+    end: new Date(2024, 5, 15),
     showEnd: false,
     showTime: false,
   },

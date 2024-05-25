@@ -29,21 +29,6 @@
           v-if="!votingPending && data !== null"
           class="flex flex-col items-center"
         >
-          <ElAlert
-            show-icon
-            center
-            class="!mb-2.5 !w-1/3 !min-w-fit"
-          >
-            <template #title>
-              <div class="mr-3 items-center text-gray-600">
-                若要查看候選人資訊，可以至<NuxtLink
-                  to="/bulletin"
-                  class="whitespace-pre-wrap break-all font-bold text-blue-400 hover:text-blue-500 hover:underline"
-                  >選舉資訊</NuxtLink
-                >查看
-              </div>
-            </template>
-          </ElAlert>
           <ElSpace
             v-if="data.voting.length"
             alignment="center"
@@ -400,12 +385,12 @@
           1. 未登入<br>
           2. 網路連線斷了<br>
           3. 未在投票時間內投票<br>
-          若有疑問請聯繫<NuxtLink
+          <!-- 若有疑問請聯繫<NuxtLink
             to="https://www.facebook.com/NTPUSU"
             target="_blank"
             class="whitespace-pre-wrap break-all font-bold text-blue-400 hover:text-blue-500 hover:underline"
             >學生會</NuxtLink
-          >
+          > -->
         </div>
       </ElDialog>
     </ClientOnly>

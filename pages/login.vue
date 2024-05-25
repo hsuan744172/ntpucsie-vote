@@ -24,18 +24,18 @@
               : signIn('google', { callbackUrl: '/vote' })
           "
         />
-        <NuxtImg
+        <!-- <NuxtImg
           src="/login/microsoft.svg"
           format="svg"
           preload
           class="m-auto my-2 w-64 cursor-pointer sm:w-72"
           @click="signIn('azure-ad', { callbackUrl: '/vote' })"
-        />
+        /> -->
         <span class="m-auto pt-5 text-sm text-gray-600">
-          請使用學校 Google 或 Microsoft 帳號進行登錄
+          請使用學校 Google 帳號進行登錄
         </span>
         <span class="m-auto text-xs text-gray-600">
-          (s+學號@gm.ntpu.edu.tw 或 s+學號@ms.ntpu.edu.tw)
+          (s+學號@gm.ntpu.edu.tw)
         </span>
         <br>
         <span class="m-auto text-xs text-gray-600">
