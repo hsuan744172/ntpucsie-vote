@@ -89,26 +89,7 @@
           <span class="text-sm font-bold sm:text-base md:text-lg"> 登出 </span>
         </ElMenuItem>
 
-        <!-- < md -->
-        <ClientOnly v-if="showLoginBadge">
-          <ElTooltip
-            effect="dark"
-            content="您的登入序號"
-            placement="bottom"
-          >
-            <ElButton
-              class="cursor-pointer md:!hidden"
-              type="primary"
-              size="large"
-              circle
-              @click="showLoginInfo"
-            >
-              <span class="text-sm font-bold text-white sm:text-base">{{
-                loginInfo.id
-              }}</span>
-            </ElButton>
-          </ElTooltip>
-        </ClientOnly>
+        
         <ClientOnly>
           <ElTooltip
             effect="dark"
@@ -239,29 +220,6 @@
               totalCnt
             }}</span></ElButton
           >
-        </ElTooltip>
-      </ClientOnly>
-    </ElAffix>
-    <ElAffix
-      v-if="showLoginBadge"
-      class="absolute right-10 top-[9.5rem] z-10 hidden hover:animate-pulse md:block"
-    >
-      <ClientOnly>
-        <ElTooltip
-          effect="dark"
-          content="你的登入序號"
-          placement="left"
-        >
-          <ElButton
-            class="!h-14 !w-14 cursor-pointer"
-            type="primary"
-            circle
-            @click="showLoginInfo"
-          >
-            <span class="text-sm font-bold text-white sm:text-base">{{
-              loginInfo.id
-            }}</span>
-          </ElButton>
         </ElTooltip>
       </ClientOnly>
     </ElAffix>
