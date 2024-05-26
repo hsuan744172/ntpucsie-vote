@@ -26,7 +26,16 @@
           @click="useRouter().push('/')"
         >
           資工系學會
+          <a href="https://www.instagram.com/ntpu_csie" target="_blank">
+        <ElMenuItem
+          index="/election-info"
+          class="!hidden md:!inline-flex"
+        >
+          <span class="text-sm font-bold sm:text-base md:text-lg " style="color: orange;">選舉資訊</span>
+        </ElMenuItem>
+      </a>
         </span>
+
         <div class="flex-grow" />
         <!-- > md -->
         <ElMenuItem
@@ -62,6 +71,7 @@
             }}</span>
           </ElMenuItem>
         </ElSubMenu>
+        
         <ElMenuItem
           v-if="status === 'unauthenticated'"
           index="/login"
@@ -78,6 +88,7 @@
         >
           <span class="text-sm font-bold sm:text-base md:text-lg"> 登出 </span>
         </ElMenuItem>
+
         <!-- < md -->
         <ClientOnly v-if="showLoginBadge">
           <ElTooltip
@@ -129,6 +140,7 @@
             /></ElIcon>
           </template>
         </ElButton>
+        
       </ElMenu>
     </ClientOnly>
 
@@ -292,12 +304,21 @@
           >
             <template #content>
               <div class="text-center">
-                投票期間為<br>2024年6月14日<br>00:00 ~ 23:59
+                投票期間為<br />2024年6月14日<br />00:00 ~ 23:59
               </div>
             </template>
             <div class="m-3 text-center">
-              <div class="text-lg text-black">投票期間登入人數</div>
-              <div class="text-2xl font-bold text-black">{{ realCnt }} 人</div>
+              <div class="text-lg text-black">
+                <a
+                  href="/rick.mp4"
+                  target="_blank"
+                  class="text-black hover:underline"
+                  >投票期間登入人數</a
+                >
+              </div>
+              <div class="text-2xl font-bold text-black">
+                <NuxtLink to="">{{ realCnt }}</NuxtLink> 人
+              </div>
             </div>
           </ElTooltip>
         </div>
@@ -322,7 +343,7 @@
         ©
         {{ new Date().getFullYear() }}
         <NuxtLink
-          to="https://www.facebook.com/NTPUSU"
+          to="https://www.facebook.com/ntpucsie"
           class="font-bold hover:text-stone-600 hover:underline"
           target="_blank"
           >國立臺北大學資工系投票</NuxtLink
@@ -381,10 +402,10 @@ useSeoMeta({
   ogSiteName: "國立臺北大學資工系投票網站",
   ogType: "website",
   ogUrl: url,
-  ogImage: url + "/ntpusu.jpg",
+  ogImage: url + "/ntpucsie.jpg",
   ogImageAlt: "國立臺北大學資工系的標誌",
   ogImageType: "image/jpeg",
-  ogImageSecureUrl: url + "/ntpusu.jpg",
+  ogImageSecureUrl: url + "/ntpucsie.jpg",
   ogLocale: "zh_TW",
   ogLocaleAlternate: "zh_TW",
   author: "國立臺北大學資工系學生會",
@@ -468,7 +489,6 @@ const getMenuItems = () => {
         useRouter().push("/");
       },
     },
-
   ];
   if (status.value === "authenticated") {
     menuItems.push({
@@ -547,7 +567,6 @@ const loginInfo = ref({
   time: "",
 });
 
-
 const showTotalBadge = ref(false);
 
 const checkLogin = () => {
@@ -569,13 +588,17 @@ const checkLogin = () => {
   }, 250);
 };
 
-const { data: totalCnt, refresh: totalCntRefresh } = await useFetch("/api/loginCnt/get");
-const { data: realCnt, refresh: realCntRefresh } = await useFetch("/api/loginCnt/get", {
-  params: {
-    startTime: new Date(2024, 4, 23).getTime(),
-    endTime: new Date(2024, 4, 23, 23, 59, 59, 999).getTime(),
+const { data: totalCnt, refresh: totalCntRefresh } =
+  await useFetch("/api/loginCnt/get");
+const { data: realCnt, refresh: realCntRefresh } = await useFetch(
+  "/api/loginCnt/get",
+  {
+    params: {
+      startTime: new Date(2024, 4, 23).getTime(),
+      endTime: new Date(2024, 4, 23, 23, 59, 59, 999).getTime(),
+    },
   },
-});
+);
 
 onMounted(() => {
   checkLogin();
