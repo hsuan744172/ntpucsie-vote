@@ -7,7 +7,7 @@
     >
       <template #title>
         <div class="mr-3 items-center text-gray-600">
-          由台北大學三峽校區學生會投票系統修改 ->
+          由臺北大學三峽校區學生會投票系統修改
           <a
             href="https://github.com/ntpusu/ntpusu-vote"
             target="_blank"
