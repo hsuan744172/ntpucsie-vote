@@ -71,7 +71,7 @@
         v-if="status === 'authenticated'"
         type="success"
         class="font-bold"
-        @click="useRouter().push('/vote')"
+        @click="router.push('/vote')"
       >
         前 往 投 票 頁 面
       </ElButton>
@@ -79,7 +79,7 @@
         v-else
         type="primary"
         class="font-bold"
-        @click="useRouter().push('/login')"
+        @click="router.push('/login')"
       >
         前 往 登 入 頁 面
       </ElButton>
@@ -133,6 +133,8 @@ definePageMeta({
   auth: false,
   title: "首頁",
 });
+
+const router = useRouter();
 
 const { status } = useAuthState();
 
