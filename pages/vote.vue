@@ -623,6 +623,8 @@ const seeResult = async (index: number) => {
         await useRouter().push("/result/" + index);
       })
       .catch(async (action: Action) => {
+        resultLoading.value[index] = false;
+
         if (action === "cancel") {
           await navigator.clipboard.writeText(data.value!.tokens[index]);
           ElMessage({
@@ -630,7 +632,6 @@ const seeResult = async (index: number) => {
             message: "已複製",
           });
 
-          resultLoading.value[index] = false;
           await useRouter().push("/result/" + index);
         }
       });
@@ -643,10 +644,14 @@ const seeResult = async (index: number) => {
       customStyle: {
         fontFamily: '"Noto Sans TC", sans-serif',
       },
-    }).then(async () => {
-      resultLoading.value[index] = false;
-      await useRouter().push("/result/" + index);
-    });
+    })
+      .then(async () => {
+        resultLoading.value[index] = false;
+        await useRouter().push("/result/" + index);
+      })
+      .catch(() => {
+        resultLoading.value[index] = false;
+      });
   }
 };
 
