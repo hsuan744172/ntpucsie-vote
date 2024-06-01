@@ -26,14 +26,22 @@
           @click="useRouter().push('/')"
         >
           資工系學會
-          <a href="https://www.instagram.com/ntpu_csie" target="_blank">
-        <ElMenuItem
-          index="/election-info"
-          class="!hidden md:!inline-flex"
-        >
-          <span class="text-sm font-bold sm:text-base md:text-lg " style="color: orange;">選舉資訊</span>
-        </ElMenuItem>
-      </a>
+          <a
+            href="https://www.instagram.com/ntpu_csie"
+            target="_blank"
+          >
+            <ElButton 
+              type="warning"
+              plain
+              index="/election-info"
+              class="!inline-flex"
+            >
+              <span
+                class="text-sm font-bold sm:text-base md:text-lg"
+                >選舉資訊</span
+              >
+            </ElButton>
+          </a>
         </span>
 
         <div class="flex-grow" />
@@ -71,7 +79,7 @@
             }}</span>
           </ElMenuItem>
         </ElSubMenu>
-        
+
         <ElMenuItem
           v-if="status === 'unauthenticated'"
           index="/login"
@@ -89,7 +97,6 @@
           <span class="text-sm font-bold sm:text-base md:text-lg"> 登出 </span>
         </ElMenuItem>
 
-        
         <ClientOnly>
           <ElTooltip
             effect="dark"
@@ -121,7 +128,6 @@
             /></ElIcon>
           </template>
         </ElButton>
-        
       </ElMenu>
     </ClientOnly>
 
