@@ -158,17 +158,17 @@ const activities = [
   },
   {
     content: "線上投票",
-    start: new Date(2024, 5, 14),
-    end: new Date(2024, 5, 15),
-    showEnd: false,
-    showTime: false,
+    start: new Date(2024, 5, 14,8,30),
+    end: new Date(2024, 5, 14,18,0),
+    showEnd: true,
+    showTime: true,
   },
   {
     content: "當選名單公告",
-    start: new Date(2024, 5, 15),
-    end: new Date(2024, 5, 15),
+    start: new Date(2024, 5, 14, 21, 0),
+    end: new Date(2024, 5, 14, 21, 0),
     showEnd: false,
-    showTime: false,
+    showTime: true,
   },
 ];
 </script>
