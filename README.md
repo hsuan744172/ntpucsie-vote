@@ -12,7 +12,7 @@
 
 ## 網址
 
-https://ntpusu-vote.vercel.app/
+https://ntpucsie-vote.vercel.app/
 
 ## 開發
 
