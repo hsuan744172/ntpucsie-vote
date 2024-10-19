@@ -9,7 +9,6 @@
 使用 [postgreSQL](https://www.postgresql.org/) 資料庫\
 使用 [prisma](https://www.prisma.io/) 作為 ORM\
 透過 [vercel](https://vercel.com/) 進行部署上線\
-供學生會進行投票使用
 
 ## 網址
 
